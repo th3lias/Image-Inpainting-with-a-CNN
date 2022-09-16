@@ -208,7 +208,8 @@ def _plot(inputs, targets, predictions, path, update):
     fig, axes = plt.subplots(ncols=3, figsize=(15, 5))
 
     for i in range(len(inputs)):
-        for ax, data, title in zip(axes, [inputs.astype('uint8'), targets.astype('uint8'), predictions.astype('uint8')], ["Input", "Target", "Prediction"]):
+        for ax, data, title in zip(axes, [inputs.astype('uint8'), targets.astype('uint8'), predictions.astype('uint8')],
+                                   ["Input", "Target", "Prediction"]):
             ax.clear()
             ax.set_title(title)
             ax.imshow(np.transpose(data[i], (1, 2, 0))[:, :, 0:3], interpolation="none")
@@ -222,7 +223,7 @@ def _collate(batch_list: list):
     # stack inputs
     inputs_stacked = torch.stack([torch.from_numpy(np.concatenate((data[0], data[1][:1, :, :])))
                                   for data in batch_list])
-    # stack knowns
+    # stack known
     known_arrays_stacked = torch.stack([torch.from_numpy(data[1]) for data in batch_list])
 
     # stack target(-images)
@@ -233,7 +234,7 @@ def _collate(batch_list: list):
     # get the maximum length of the target arrays in the current batch
     max_len = np.max([target.shape[0] for target in targets])
     # create a tensor of size (batch_size, max_len) to hold the target arrays
-    targets_tensor = torch.zeros(size=(len(targets), max_len, ), dtype=torch.float32)
+    targets_tensor = torch.zeros(size=(len(targets), max_len,), dtype=torch.float32)
     # Write the target to the stacked (padded) targets
     for i, target in enumerate(targets):
         targets_tensor[i, :len(target)] = torch.from_numpy(target)
