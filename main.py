@@ -1,10 +1,6 @@
 """
 Author: Elias Mindlberger
-Matr.Nr.: 12043382
-Exercise 5
-
     The functions below are designed to train a Neural Network to in-paint images.
-
 """
 import numpy as np
 import torch

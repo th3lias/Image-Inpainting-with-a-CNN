@@ -1,12 +1,8 @@
 # -*- coding: utf-8 -*-
 """
 Author: Elias Mindlberger
-Matr.Nr.: 12043382
-Exercise 5
-
     The classes below are required for loading and storing data
     and feeding data in a fitting shape to a CNN model.
-
 """
 from torch.utils.data import Dataset
 from torchvision import transforms

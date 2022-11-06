@@ -1,24 +1,8 @@
 # -*- coding: utf-8 -*-
-"""06_solutions.py
-
-Author -- Michael Widrich, Andreas Schörgenhumer
-Contact -- schoergenhumer@ml.jku.at
-Date -- 12.04.2022
-
-###############################################################################
-
-The following copyright statement applies to all code within this file.
-
-Copyright statement:
-This material, no matter whether in printed or electronic form, may be used for
-personal and non-commercial educational use only. Any reproduction of this
-manuscript, no matter whether as a whole or in parts, no matter whether in
-printed or in electronic form, requires explicit prior acceptance of the
-authors.
-
-###############################################################################
-
-Example solutions for tasks in file 06_tasks.py.
+"""
+    Author: Elias Mindlberger
+    The functions below describe the network architecture of the used CNN.
+    The Network is customizable wrt. the number of layers and the number of filters per layer.
 """
 import torch
 import torch.nn as nn
