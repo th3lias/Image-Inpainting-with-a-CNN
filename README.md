@@ -1,7 +1,3 @@
-# Im-In
+# An Image Inpainting Pipeline
 
-This project includes data preparation, augmentation and model training from start to finish.
-The model is a simple CNN with skip connections. See: https://arxiv.org/abs/1608.06993
-
-The model learns to inpaint random grids of variable width and height on images with resolution 100x100.
-Default hparams are set but can be modified. It also utilizes parallelization and multiprocessing on the GPU.
+This project includes data preparation, augmentation and model training from start to finish. The model is based on a simple CNN with skip connections. See: https://arxiv.org/abs/1608.06993 for infos. This project was carried out as a part of the WS 2021/22 lecture _Programming in Python 2_ at JKU Linz.
